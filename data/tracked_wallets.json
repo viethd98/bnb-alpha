@@ -1,0 +1,58 @@
+{
+  "413315441": {
+    "wallets": [
+      "0xA6f5aa02BE2D334c42C90e36f726e4e871Ba95c1"
+    ],
+    "user": {
+      "id": 413315441,
+      "username": "ubank_me",
+      "first_name": "Abc"
+    }
+  },
+  "1664738689": {
+    "wallets": [
+      "0x67e2d0dc819b5d767b7a0210e63adbafd23bff3c",
+      "0xc0ac9adc74a36b5f966bd1e638819b1579fefae9",
+      "0x16a06cb65203406466f048289d7e54dd22ce3b6c"
+    ],
+    "user": {
+      "id": 1664738689,
+      "username": "viet8638",
+      "first_name": "vietchmmo 🆙 UXUY"
+    }
+  },
+  "1862093141": {
+    "wallets": [
+      "0xa77FfB63f6Ee3f6b4Dc498CDfFCfA3b999FC78a2",
+      "0xC0F33f1Dd1adCEbb52CC244d1A10588189345a91",
+      "0xFA9D82f89da9a7e5532bCFF18Fa7fcE1Fd8a107e",
+      "0xD491570C766d48863CA05D9788219846ABF8243A"
+    ],
+    "user": {
+      "id": 1862093141,
+      "username": "quangcv187",
+      "first_name": "Quang"
+    }
+  },
+  "7705416779": {
+    "wallets": [
+      "0xb8b540bce2a9336ab87e822743c25871164389a1"
+    ],
+    "user": {
+      "id": 7705416779,
+      "username": "luongvan123",
+      "first_name": "Lượng"
+    }
+  },
+  "5799206872": {
+    "wallets": [
+      "0x08d47f629c249ab0fcac8b72379d48f8a2e23c25",
+      "0xb9f177ba27db149b5d4f82929039064aa181a656"
+    ],
+    "user": {
+      "id": 5799206872,
+      "username": "unknown",
+      "first_name": "Nam 💎"
+    }
+  }
+}
