@@ -112,12 +112,23 @@ async function testTransaction() {
 // Hàm lấy danh sách token transfers từ BscScan
 async function getTokenTransfers(walletAddress) {
   try {
-    const startOfDay = moment.utc().startOf("day");
-    const endOfDay = moment.utc().endOf("day");
+    // Lấy thời gian hiện tại theo UTC
+    const now = moment.utc();
+    
+    // Tính thời gian bắt đầu và kết thúc của ngày hiện tại theo UTC
+    const startOfDay = now.clone().startOf('day');
+    const endOfDay = now.clone().endOf('day');
 
     // Lấy timestamp của đầu ngày và cuối ngày
     const startTimestamp = Math.floor(startOfDay.valueOf() / 1000);
     const endTimestamp = Math.floor(endOfDay.valueOf() / 1000);
+
+    console.log('Time range:', {
+      start: startOfDay.format('YYYY-MM-DD HH:mm:ss'),
+      end: endOfDay.format('YYYY-MM-DD HH:mm:ss'),
+      startTimestamp,
+      endTimestamp
+    });
 
     const response = await axios.get("https://api.bscscan.com/api", {
       params: {
@@ -347,7 +358,7 @@ bot.onText(/\/stats/, async (msg) => {
     if (walletStats.length > 0) {
       // Lấy giao dịch đầu tiên của ví
       const firstTx = walletStats[walletStats.length - 1];
-      message += `⏰ Tx đầu tiên trong ngày: [${moment(firstTx.time)
+      message += `⏰ Tx đầu tiên trong ngày: [${moment.utc(firstTx.time)
         .utcOffset(7)
         .format("DD/MM/YYYY HH:mm:ss")}] UTC+7 - ${firstTx.value.toFixed(
         2
@@ -355,7 +366,7 @@ bot.onText(/\/stats/, async (msg) => {
 
       // Lấy giao dịch mới nhất của ví
       const latestTx = walletStats[0];
-      message += `🔄 Tx cuối cùng trong ngày: [${moment(latestTx.time)
+      message += `🔄 Tx cuối cùng trong ngày: [${moment.utc(latestTx.time)
         .utcOffset(7)
         .format("DD/MM/YYYY HH:mm:ss")}] UTC+7 - ${latestTx.value.toFixed(
         2
